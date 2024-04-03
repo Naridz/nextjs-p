@@ -9,7 +9,7 @@ function Pokemon() {
     const [pokemon,setPokemon] = useState([])
     const [loading,setLoading] = useState(false)
 
-    useEffect(()=>{
+    
         const fetchPokemon = async()=>{
             try{
                 setLoading(true);
@@ -21,6 +21,8 @@ function Pokemon() {
                 console.log(error)
             }
         }
+    
+    useEffect(()=>{
         fetchPokemon();
     },[])
 
@@ -33,7 +35,7 @@ function Pokemon() {
                         <div key={i} className='flex justify-center items-center shadow-md transition hover:shadow-lg m-3 rounded'>
                             <div >
                                 <h3>{p.name}</h3>                   
-                                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i+1}.png`} width={120} height={120} alt={p.name} />                 
+                                    <Image src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i+1}.png`} width={120} height={120} alt={p.name} />                 
                             </div>
                         </div>
                     </Link>

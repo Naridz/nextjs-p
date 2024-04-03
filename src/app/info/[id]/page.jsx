@@ -40,10 +40,10 @@ function PoInfo() {
                     <>
                     <h3 className='text-3xl'>{pokemon.name}</h3>
                     {pocolor?(
-                        <img src={pokemon.sprites?.other.home.front_default} width={300} height={300} 
+                        <Image src={pokemon.sprites?.other.home.front_default} width={300} height={300} 
                         alt={pokemon.name} onClick={changeColor} className='cursor-crosshair' />    
                     ):(
-                        <img src={pokemon.sprites?.other.home.front_shiny} width={300} height={300}
+                        <Image src={pokemon.sprites?.other.home.front_shiny} width={300} height={300}
                         alt={pokemon.name} onClick={changeColor} className='cursor-crosshair' />
                     )}
                     <div className='mt-5'>
