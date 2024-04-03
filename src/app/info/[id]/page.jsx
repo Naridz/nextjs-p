@@ -1,7 +1,7 @@
 "use client"
 
-import { useParams } from 'next/navigation'
 import React,{useState,useEffect} from 'react'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -40,10 +40,10 @@ function PoInfo() {
                     <>
                     <h3 className='text-3xl'>{pokemon.name}</h3>
                     {pocolor?(
-                        <Image src={pokemon.sprites?.other.home.front_default} width={300} height={300} 
+                        <img src={pokemon.sprites?.other.home.front_default} width={300} height={300} 
                         alt={pokemon.name} onClick={changeColor} className='cursor-crosshair' />    
                     ):(
-                        <Image src={pokemon.sprites?.other.home.front_shiny} width={300} height={300}
+                        <img src={pokemon.sprites?.other.home.front_shiny} width={300} height={300}
                         alt={pokemon.name} onClick={changeColor} className='cursor-crosshair' />
                     )}
                     <div className='mt-5'>
