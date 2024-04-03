@@ -32,8 +32,7 @@ function Pokemon() {
                         <div key={i} className='flex justify-center items-center shadow-md transition hover:shadow-lg m-3 rounded'>
                             <div >
                                 <h3>{p.name}</h3>                   
-                                    <Image src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i+1}.png`} 
-                                    width={120} height={120} alt={p.title}/>                 
+                                    <Image src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${i+1}.png`} width={120} height={120} alt={p.name} />                 
                             </div>
                         </div>
                     </Link>
